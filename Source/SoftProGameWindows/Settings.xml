@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PersistedSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SelectedCameraDisplayName>HP Webcam [2 MP Macro]</SelectedCameraDisplayName>
+  <FlipImageHorizontally>true</FlipImageHorizontally>
+  <CropWebCam_WidthPercent>0.5</CropWebCam_WidthPercent>
+  <CropWebCam_HeightPercent>0.8</CropWebCam_HeightPercent>
+  <Haircut_Offset>40</Haircut_Offset>
+  <Face_Height>30</Face_Height>
+  <Face_Width>30</Face_Width>
+  <HeadImage_VertOffset>50</HeadImage_VertOffset>
+  <HeadImage_HorzOffset>50</HeadImage_HorzOffset>
+  <Size_HeadImageToScoringServer>
+    <Width>120</Width>
+    <Height>131</Height>
+  </Size_HeadImageToScoringServer>
+</PersistedSettings>

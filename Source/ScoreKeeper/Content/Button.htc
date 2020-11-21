@@ -1,0 +1,93 @@
+<head>
+    <public:component tagName="Button">
+      <public:defaults viewLinkContent tabStop />
+      <public:attach event="oncontentready" onevent="init()"/>
+      <public:attach event="onkeyup" onevent="onKeyUp()" />
+    </public:component>    
+    <style>
+        .OuterLayoutPanel
+        {
+            border:none 0px;
+            padding:0px;
+            margin:0px;   
+            color:#FFFFFF;
+            font:bold 9.75pt arial;         
+            font-variant:small-caps;
+            cursor:default;
+        }
+        .ButtonLeft
+        {
+        	background-image:url(.\ButtonLeftNormal.png);
+        	background-repeat:no-repeat;
+        	width:9px;
+        	height:27px;
+        }
+        .ButtonCenter
+        {
+        	background-image:url(.\ButtonCenterNormal.png);
+        	background-repeat:repeat-x;
+        	/*padding:0px 3px 0px 3px;*/
+        }
+        .ButtonRight
+        {
+        	background-image:url(.\ButtonRightNormal.png);
+        	background-repeat:no-repeat;
+        	width:9px;
+        	height:27px;
+        }
+        #Glyph
+        {
+        	font-family:webdings;
+        	font-variant:normal;
+        }
+        #Title
+        {
+        }
+    </style>
+    <script language="jscript">
+        // Defines the component entry point.
+        function init() {
+            Title.innerHTML = element.title;
+            Glyph.innerHTML = element.glyph;
+        }
+
+        //handles the kepup event
+        function onKeyUp() {
+            if (event.keyCode == 13) {
+                this.onclick();
+            }
+        }
+        
+        //shows the button as pressed
+        function showPressed() {
+            LeftCell.style.backgroundImage = 'url(.\\ButtonLeftPressed.png)';
+            CenterCell.style.backgroundImage = 'url(.\\ButtonCenterPressed.png)';
+            RightCell.style.backgroundImage = 'url(.\\ButtonRightPressed.png)';
+        }
+
+        //shows the button as normal
+        function showNormal() {
+            LeftCell.style.backgroundImage = 'url(.\\ButtonLeftNormal.png)';
+            CenterCell.style.backgroundImage = 'url(.\\ButtonCenterNormal.png)';
+            RightCell.style.backgroundImage = 'url(.\\ButtonRightNormal.png)';
+        }
+        //shows the button as hover
+        function showHover() {
+            LeftCell.style.backgroundImage = 'url(.\\ButtonLeftHover.png)';
+            CenterCell.style.backgroundImage = 'url(.\\ButtonCenterHover.png)';
+            RightCell.style.backgroundImage = 'url(.\\ButtonRightHover.png)';
+        }
+    </script>
+</head>
+<body style="background-color:transparent;">
+    <table cellpadding="0" cellspacing="0" class="OuterLayoutPanel" onmousedown="showPressed();" onmouseup="showNormal();" onmouseout="showNormal();" onmouseover="showHover();">
+        <tr>
+            <td class="ButtonLeft" noWrap id="LeftCell"></td>
+            <td class="ButtonCenter" noWrap id="CenterCell">
+                <span id="Title">button</span>
+                <span id="Glyph">4</span>
+            </td>
+            <td class="ButtonRight" noWrap id="RightCell"></td>
+        </tr>
+    </table>
+</body>

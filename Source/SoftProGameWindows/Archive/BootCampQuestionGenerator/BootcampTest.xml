@@ -1,0 +1,728 @@
+<?xml version="1.0"?>
+<BootCampTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Questions>
+    <Question>
+      <QuestionText>Which of the roles below is the Settlement Agent most likely to function as at closing:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>a. Underwriter</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>b. Closer</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>c. Lender</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>d. Broker</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What is the primary purpose of Hazard Insurance?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Insure dwelling or structure (homeowners)</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Insure your auto</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Insure your pets</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What does CFPB stand for?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Consumer Financial Protection Bureau</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Capital Finance Production Bureau</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Consumer Fraud Protection Bureau</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>How can the user hide the TX Commitment Schedule D screen in Select?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>It is automatically hidden if the property state is not Texas</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>It always shows unless the user has custom "My Screens" installed without this screen</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>On the menu bar, choose Tools/User Options, and uncheck "Show Commitment Schedule D"</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>On the Profiles screen, uncheck "Show Commitment Schedule D (TLTA)"</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>How do you access the formula editor?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>F4</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>F6</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>F8</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl + F</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Which of the following is NOT setup for the user in the default installation?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Default order numbering manager</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Default trust account code</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Default office hours manager</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Default ProForm report tree</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Custom integrations with Select can be done through the purchase of the:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>NPI</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>API</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>CSI</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>LPS</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Which of the below best describes the Worklist feature:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>A feature that allows one to create saved "Searches" or "Queries".</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>There is no such thing as Worklists in Select</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A feature that allows one to create reports in Select and pull any data they want as long as it is in the database.</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A feature that allows a user to see what orders they need to work on that day by the tasks that are assigned to them.</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>The primary purpose of title insurance is to protect the insured party against which of the following scenarios?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Claims that could be made against the title resulting from any encroachments that may be established in the future without knowledge of the current owner.</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Claims that could be made against the title resulting from issues/events that result from something the current owner may do to the property in the future</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Claims that could be made against the title resulting from issues/events that occurred prior to the current owner purchasing the property.</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>None of the above.</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>On the GFE HUD-1, the Origination Charge (HUD Line 801)  is associated with which of the following fee categories?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Fees that cannot increase</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Fees that can change</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Fees that can change up to a total of 10%</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Fees that can change up to a total of 15%</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>John Morton's license plate reads:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Help Me</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Cr8zy</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>DaBears</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Vantron</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Which day do the Food Trucks come?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Monday</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Wednesday</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Thursday</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Friday</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>In a Zombie Apocolypse, who would you want in your camp?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>John Morton</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Doug Harty</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Both. We will need the entertainment.</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What was the SoftPro Summer Movie Event this year?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Planes, Trains and Automobiles</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Toy Story 3</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Planes - Fire &amp; Rescue</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Star Wars</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Fun Fridays are fun because:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>The games and prizes are cool</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>We get to raise money for GREAT causes</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>We get to wear shorts &amp; flip flops on Fridays for a nominal fee</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Meet up with all of the GREAT employees</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>ALL OF THE ABOVE</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Module that allows documents to be scanned and attached to a ProForm file:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>SPAdmin</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>ProTrust</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Pro1099</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>SPImage</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>The Order History Log in Select serves which purpose?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>It's the new name for Order Notes, where users can manually add information about changes to the order.</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>It allows a manager to view the status and workflow step for all open orders.</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>It's a system-generated audit trail of changes to certain key fields.</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What hot key clears field text?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>F1</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>F2</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>F8</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>F9</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What hot key will open the "Loan Funding Summary" window?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl+L</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Alt+F7</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl+A</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>F11</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Where do you set up a list of Holidays?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Drop-down Lists</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Permissions</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>My Screens</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Office Hours</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>How many order contacts can you have on an order?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>9</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>15</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>25</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Unlimited</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Who provides the actual value for a property?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>The Attorney</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>The Abstractor</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>The Appraiser</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>The Settlement Agent</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>A non-Guaranty ledger is generally what kind of ledger?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A Closing Ledger</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>A Fee ledger, or similar ledger type</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A check</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A deposit</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What does POC mean?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Private Outside Closing</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Paid Outside of Closing</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Paid At Closing</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Paid Order Contact</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What hot key will open a scrollable field in it's own window?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl+C</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl+D</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Ctrl+E</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Ctrl+F</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>On Documents &amp; Reports, what color represents a "Field Code"?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Red</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Yellow</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Blue</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Purple</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>RESPA was established to protect...</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Consumers</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Lenders</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Settlement Agents</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Underwriters</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>How many HUD lines can you add to a section?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>10</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>99</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>100</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Unlimited</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Who are the two required parties in a purchase?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Borrower/Lender</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Buyer/Seller</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Seller/Settlement Agent</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Settlement Agent/Underwriter</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What does HUD stand for?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Human and Urban Development</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Housing Union Development</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Housing and Urban Development</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Home and Urban Development</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>Party responsible for conducting the closing, including the execution of documents and the disbursement of funds to the appropriate parties is:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Underwriter</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Settlement Agent</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Listing Agent</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Appraiser</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>A document typically used to transfer ownership of real property from one party to another:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Loan Policy</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Owners Policy</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Mortgage</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Deed</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>A link from a ReadyDoc to a specific field in a Proform order is called:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Lookup table</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Cold spot</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>Hotspot</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Here, let me help you spot</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>An official who witnesses the signing of legal documents is called:</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A broker</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A listing agent</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>A notary</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>A cat</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+    <Question>
+      <QuestionText>What is the module that allows documents to be scanned and attached to a ProForm file?</QuestionText>
+      <Answers>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>Pro1099</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>ProImage</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>true</isCorrect>
+          <AnswerText>SPImage</AnswerText>
+        </Answer>
+        <Answer>
+          <isCorrect>false</isCorrect>
+          <AnswerText>SPAdmin</AnswerText>
+        </Answer>
+      </Answers>
+    </Question>
+  </Questions>
+</BootCampTest>

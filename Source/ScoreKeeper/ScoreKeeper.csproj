@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7A9F887E-C3BE-46CC-AD6C-AA783253A757}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScoreKeeper</RootNamespace>
+    <AssemblyName>ScoreKeeper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <OutputPath>..\..\Binaries\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\SqlCe\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="MovieContentHandler.cs" />
+    <Compile Include="FundContentHandler.cs" />
+    <Compile Include="ScoreContentHandler.cs" />
+    <Compile Include="HttpContentHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="ScoreService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Default.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\AlphaWhitePixel.png" />
+    <EmbeddedResource Include="Content\BannerCenter.png" />
+    <EmbeddedResource Include="Content\BannerLeft.png" />
+    <EmbeddedResource Include="Content\BannerRight.png" />
+    <EmbeddedResource Include="Content\Button.htc" />
+    <EmbeddedResource Include="Content\ButtonCenterHover.png" />
+    <EmbeddedResource Include="Content\ButtonCenterNormal.png" />
+    <EmbeddedResource Include="Content\ButtonCenterPressed.png" />
+    <EmbeddedResource Include="Content\ButtonLeftHover.png" />
+    <EmbeddedResource Include="Content\ButtonLeftNormal.png" />
+    <EmbeddedResource Include="Content\ButtonLeftPressed.png" />
+    <EmbeddedResource Include="Content\ButtonRightHover.png" />
+    <EmbeddedResource Include="Content\ButtonRightNormal.png" />
+    <EmbeddedResource Include="Content\ButtonRightPressed.png" />
+    <EmbeddedResource Include="Content\Common.css" />
+    <EmbeddedResource Include="Content\GroupBox.htc" />
+    <EmbeddedResource Include="Content\GroupBoxBottomLeft.png" />
+    <EmbeddedResource Include="Content\GroupBoxBottomMiddle.png" />
+    <EmbeddedResource Include="Content\GroupBoxBottomRight.png" />
+    <EmbeddedResource Include="Content\GroupBoxMiddleLeft.png" />
+    <EmbeddedResource Include="Content\GroupBoxMiddleRight.png" />
+    <EmbeddedResource Include="Content\GroupBoxTopLeft.png" />
+    <EmbeddedResource Include="Content\GroupBoxTopMiddleLower.png" />
+    <EmbeddedResource Include="Content\GroupBoxTopMiddleUpper.png" />
+    <EmbeddedResource Include="Content\GroupBoxTopRight.png" />
+    <EmbeddedResource Include="Content\House.png" />
+    <EmbeddedResource Include="Content\OrderGlyph.png" />
+    <EmbeddedResource Include="Content\Progress.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\LymphomaLogo.png" />
+    <EmbeddedResource Include="Content\LymphomaRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Money.htm" />
+    <EmbeddedResource Include="Content\cash-bag.png" />
+    <EmbeddedResource Include="Content\sepsisalliancelogo.gif" />
+    <EmbeddedResource Include="Content\SepsisRibbon.png" />
+    <Content Include="..\..\3rdParty\SqlCe\sqlceca40.dll">
+      <Link>sqlceca40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlcecompact40.dll">
+      <Link>sqlcecompact40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlceer40EN.dll">
+      <Link>sqlceer40EN.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlceme40.dll">
+      <Link>sqlceme40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlceoledb40.dll">
+      <Link>sqlceoledb40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlceqp40.dll">
+      <Link>sqlceqp40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\3rdParty\SqlCe\sqlcese40.dll">
+      <Link>sqlcese40.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Movie4.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Content\Movie4.htm" />
+    <Content Include="Movie2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Movie3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Content\Movie3.htm" />
+    <EmbeddedResource Include="Content\Movie2.htm" />
+    <Content Include="Movie1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Content\Movie1.htm" />
+    <Content Include="Instructions.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

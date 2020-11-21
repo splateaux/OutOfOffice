@@ -1,0 +1,2300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{2AD1ED39-1E1B-47D6-B73E-E15402429661}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+    <OutputPath>..\..\Binaries\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SoftProGameContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Effects\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\gamefont.spritefont">
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Fonts\menufont.spritefont">
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Blank.png">
+      <Name>Blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Gradient.png">
+      <Name>Gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\ExitReached.wma">
+      <Name>ExitReached</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\SoftProDollarCollected.wma">
+      <Name>SoftProDollarCollected</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\MonsterKilled.wma">
+      <Name>MonsterKilled</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Songs\MusicOld.wma">
+      <Name>MusicOld</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\PlayerFall.wma">
+      <Name>PlayerFall</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\PlayerJump.wma">
+      <Name>PlayerJump</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\PlayerKilled.wma">
+      <Name>PlayerKilled</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\Powerup.wma">
+      <Name>Powerup</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Hud.spritefont">
+      <Name>Hud</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\Save\you_died.png">
+      <Name>you_died</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Overlays\you_lose.png">
+      <Name>you_lose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Overlays\you_win.png">
+      <Name>you_win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Hud_Old.spritefont">
+      <Name>Hud_Old</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\Box.png">
+      <Name>Box</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\Jump.png">
+      <Name>Jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\Celebrate.png">
+      <Name>Celebrate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\Die.png">
+      <Name>Die</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\StaticArt\CatchesMTV.png">
+      <Name>CatchesMTV</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Embedded.png">
+      <Name>Embedded</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern1.png">
+      <Name>Modern1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern2.png">
+      <Name>Modern2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern3.png">
+      <Name>Modern3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern4.png">
+      <Name>Modern4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern5.png">
+      <Name>Modern5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\Modern6.png">
+      <Name>Modern6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\StaticArt\WhatIThinkYallAskedFor.png">
+      <Name>WhatIThinkYallAskedFor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\SoftProDollar.png">
+      <Name>SoftProDollar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Impact.spritefont">
+      <Name>Impact</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Fonts\Stencil.spritefont">
+      <Name>Stencil</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Fonts\ScoreBoardFont_41pt.spritefont">
+      <Name>ScoreBoardFont_41pt</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <None Include="Data\LevelConfiguration.xml">
+      <Name>LevelConfiguration</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Fonts\NameEntry.spritefont">
+      <Name>NameEntry</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\LaserPrinter.png">
+      <Name>LaserPrinter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\Table.png">
+      <Name>Table</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugA\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugA\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugB\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugB\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugC\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugC\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\Email_Alert_2.png">
+      <Name>Email_Alert_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Overlays\Email_Main_1.png">
+      <Name>Email_Main_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Overlays\Email_SetTheStage_3.png">
+      <Name>Email_SetTheStage_3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Songs\Music.wav">
+      <Name>Music</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\OpenDoor.wav">
+      <Name>OpenDoor</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\Opening\OpeningPage.png">
+      <Name>OpeningPage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\CloseupSmall.png">
+      <Name>CloseupSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\StaticArt\LoveSheets\CansLoveSheet.png">
+      <Name>CansLoveSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\StaticArt\LoveSheets\BigBugLoveSheet.png">
+      <Name>BigBugLoveSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\MazeGame\OldBoss.png">
+      <Name>OldBoss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\MazeGame\ConferenceRoom.png">
+      <Name>ConferenceRoom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\HUD.png">
+      <Name>HUD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\Can_DrDocuments.png">
+      <Name>Can_DrDocuments</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\Can_ImplementationMist.png">
+      <Name>Can_ImplementationMist</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\Can_SupportSoda.png">
+      <Name>Can_SupportSoda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\you_died.png">
+      <Name>you_died</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\GradientBackground.png">
+      <Name>GradientBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Click.wma">
+      <Name>Click</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Reminder.wma">
+      <Name>Reminder</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\QuizGameQuestions.xml">
+      <Name>QuizGameQuestions</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuizGameDataTypes\QuizGameDataTypes.csproj">
+      <Project>{51ae6590-ec90-4801-b669-6d6f4f32160b}</Project>
+      <Name>QuizGameDataTypes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Doh.wav">
+      <Name>Doh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\Can_DrDocuments_Small.png">
+      <Name>Can_DrDocuments_Small</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\FridgeGame\Can_ImplementationMist_Small.png">
+      <Name>Can_ImplementationMist_Small</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\FridgeGame\Can_SupportSoda_Small.png">
+      <Name>Can_SupportSoda_Small</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Cheering.wav">
+      <Name>Cheering</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\UpperCut.wav">
+      <Name>UpperCut</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\CircleGradient.png">
+      <Name>CircleGradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\DrinkFridgeBackground.png">
+      <Name>DrinkFridgeBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\MazeGame\Boss.png">
+      <Name>Boss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\Joyce\HiThere1.png">
+      <Name>HiThere1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\Joyce\HiThere2.png">
+      <Name>HiThere2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\Joyce\HiThere3.png">
+      <Name>HiThere3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Videos\OutOfOfficeIntro.wmv">
+      <Name>OutOfOfficeIntro</Name>
+      <Importer>WmvImporter</Importer>
+      <Processor>VideoProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\Jump.png">
+      <Name>Jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\Celebrate.png">
+      <Name>Celebrate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\Die.png">
+      <Name>Die</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ChooseCharacter\Don.png">
+      <Name>Don</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ChooseCharacter\John.png">
+      <Name>John</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ChooseCharacter\McB.png">
+      <Name>McB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\CloseupSmall.png">
+      <Name>CloseupSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\IdleBack.png">
+      <Name>IdleBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\Don\FridgeGame\HandsDown.png">
+      <Name>HandsDown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\Don\FridgeGame\HandsUp_DrDocuments.png">
+      <Name>HandsUp_DrDocuments</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\Don\FridgeGame\HandsUp_Empty.png">
+      <Name>HandsUp_Empty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\Don\FridgeGame\HandsUp_ImpMist.png">
+      <Name>HandsUp_ImpMist</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\Don\FridgeGame\HandsUp_SupportSoda.png">
+      <Name>HandsUp_SupportSoda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\FridgeGame\HandsDown.png">
+      <Name>HandsDown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\John\FridgeGame\HandsUp_DrDocuments.png">
+      <Name>HandsUp_DrDocuments</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\John\FridgeGame\HandsUp_ImpMist.png">
+      <Name>HandsUp_ImpMist</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\John\FridgeGame\HandsUp_SupportSoda.png">
+      <Name>HandsUp_SupportSoda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BackWall.png">
+      <Name>BackWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BlueWall.png">
+      <Name>BlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Carpet.png">
+      <Name>Carpet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Ceiling.png">
+      <Name>Ceiling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\CubeWalls.png">
+      <Name>CubeWalls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\CubeWallsSmall.png">
+      <Name>CubeWallsSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\LeftInwardBlueWall.png">
+      <Name>LeftInwardBlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\LightBlueWall.png">
+      <Name>LightBlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\RightInwardBlueWall.png">
+      <Name>RightInwardBlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\CubeDoors.png">
+      <Name>CubeDoors</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\CubePeople.png">
+      <Name>CubePeople</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\LeftInwardYellowWall.png">
+      <Name>LeftInwardYellowWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\RightInwardYellowWall.png">
+      <Name>RightInwardYellowWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\YellowWall.png">
+      <Name>YellowWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\LeftOutwardBlueWall.png">
+      <Name>LeftOutwardBlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\RightOutwardBlueWall.png">
+      <Name>RightOutwardBlueWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\FridgeGame\HandsUp_Empty.png">
+      <Name>HandsUp_Empty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugD\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugD\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugE\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Enemies\BugE\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Enemies\BugF\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Enemies\BugF\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Droid.wma">
+      <Name>Droid</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\Gunshot.wav">
+      <Name>Gunshot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\WinnerScreen\Don.png">
+      <Name>Don</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\WinnerScreen\John.png">
+      <Name>John</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\John\IdleBack.png">
+      <Name>IdleBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\BreakRoomDoor.png">
+      <Name>BreakRoomDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\EntryDoorBack.png">
+      <Name>EntryDoorBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\EntryDoorFront.png">
+      <Name>EntryDoorFront</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\ExitDoor.png">
+      <Name>ExitDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\MeasuringGrid.png">
+      <Name>MeasuringGrid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\BigCube.png">
+      <Name>BigCube</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\BigCubeFront.png">
+      <Name>BigCubeFront</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\ExitSign.png">
+      <Name>ExitSign</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BunchOfChairs.png">
+      <Name>BunchOfChairs</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\BlackChair.png">
+      <Name>BlackChair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\BlueChair.png">
+      <Name>BlueChair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\RedChair.png">
+      <Name>RedChair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\TealChair.png">
+      <Name>TealChair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\LobbyDoor.png">
+      <Name>LobbyDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\TrainingRoomDoor.png">
+      <Name>TrainingRoomDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\MensRRClosed.png">
+      <Name>MensRRClosed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\MensRROpen.png">
+      <Name>MensRROpen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\WaterFountain.png">
+      <Name>WaterFountain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\WomensRRClosed.png">
+      <Name>WomensRRClosed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\WomensRROpen.png">
+      <Name>WomensRROpen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\BlazeOrangeMarker.png">
+      <Name>BlazeOrangeMarker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\Run.png">
+      <Name>Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\Celebrate.png">
+      <Name>Celebrate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\Die.png">
+      <Name>Die</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\Idle.png">
+      <Name>Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\IdleBack.png">
+      <Name>IdleBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\Jump.png">
+      <Name>Jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\WinnerScreen\McB.png">
+      <Name>McB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\FridgeGame\HandsDown.png">
+      <Name>HandsDown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\McB\FridgeGame\HandsUp_Empty.png">
+      <Name>HandsUp_Empty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\McB\FridgeGame\HandsUp_DrDocuments.png">
+      <Name>HandsUp_DrDocuments</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\McB\FridgeGame\HandsUp_ImpMist.png">
+      <Name>HandsUp_ImpMist</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Players\McB\FridgeGame\HandsUp_SupportSoda.png">
+      <Name>HandsUp_SupportSoda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Players\McB\CloseupSmall.png">
+      <Name>CloseupSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\LoserScreen\Don.png">
+      <Name>Don</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\LoserScreen\John.png">
+      <Name>John</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\LoserScreen\McB.png">
+      <Name>McB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Error.wma">
+      <Name>Error</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\MetalClick.wma">
+      <Name>MetalClick</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\Boo.wma">
+      <Name>Boo</Name>
+      <Importer>WmaImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\Boxes.png">
+      <Name>Boxes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\SoftPro.png">
+      <Name>SoftPro</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\CubePeople2.png">
+      <Name>CubePeople2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\HallPeople.png">
+      <Name>HallPeople</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BathroomPeople.png">
+      <Name>BathroomPeople</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BathroomPeople2.png">
+      <Name>BathroomPeople2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\BathroomPeople3.png">
+      <Name>BathroomPeople3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\Bookcase.png">
+      <Name>Bookcase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_BillGatesEmail.wav">
+      <Name>John_BillGatesEmail</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_ChooseMeChooseMe.wav">
+      <Name>John_ChooseMeChooseMe</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_DonNeedsHelmet.wav">
+      <Name>John_DonNeedsHelmet</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_IKnow.wav">
+      <Name>John_IKnow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_LookMaImThin.wav">
+      <Name>John_LookMaImThin</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\John\John_NotGreenEyes.wav">
+      <Name>John_NotGreenEyes</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_BugSquish.wav">
+      <Name>John_BugSquish</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_ByDesign.wav">
+      <Name>John_ByDesign</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_CrushBug_1.wav">
+      <Name>John_CrushBug_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_CrushBug_2.wav">
+      <Name>John_CrushBug_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_IDidntMakeBug.wav">
+      <Name>John_IDidntMakeBug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_IDontGetHitByBugs.wav">
+      <Name>John_IDontGetHitByBugs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_IDontSeeBugs.wav">
+      <Name>John_IDontSeeBugs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_Ignore.wav">
+      <Name>John_Ignore</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_IRunRightToBug.wav">
+      <Name>John_IRunRightToBug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_JustSplat.wav">
+      <Name>John_JustSplat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_LogABug.wav">
+      <Name>John_LogABug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_NHibernate.wav">
+      <Name>John_NHibernate</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_NoBugsHere.wav">
+      <Name>John_NoBugsHere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_NotMyBug.wav">
+      <Name>John_NotMyBug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_NurfGun.wav">
+      <Name>John_NurfGun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_OhIGetBoom.wav">
+      <Name>John_OhIGetBoom</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_OutaThaWay.wav">
+      <Name>John_OutaThaWay</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_TakeThat.wav">
+      <Name>John_TakeThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_Validation.wav">
+      <Name>John_Validation</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\John\John_WhooshAndSplat.wav">
+      <Name>John_WhooshAndSplat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_AhDang.wav">
+      <Name>John_AhDang</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_AwesomeFridge.wav">
+      <Name>John_AwesomeFridge</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_Beer.wav">
+      <Name>John_Beer</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_CatchTheDrink.wav">
+      <Name>John_CatchTheDrink</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_MSDidForUs.wav">
+      <Name>John_MSDidForUs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_MSDoesntDoThis.wav">
+      <Name>John_MSDoesntDoThis</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\John\John_OhYeah.wav">
+      <Name>John_OhYeah</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_BugOops.wav">
+      <Name>John_BugOops</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_CallSupport.wav">
+      <Name>John_CallSupport</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_DefineTest.wav">
+      <Name>John_DefineTest</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_Doh_1.wav">
+      <Name>John_Doh_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_DontDoThat.wav">
+      <Name>John_DontDoThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_NotUsingRight.wav">
+      <Name>John_NotUsingRight</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_OhNo.wav">
+      <Name>John_OhNo</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_PageCSI.wav">
+      <Name>John_PageCSI</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_VerySensitive.wav">
+      <Name>John_VerySensitive</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\John\John_WasABug.wav">
+      <Name>John_WasABug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_CouldaGoneBetter.wav">
+      <Name>John_CouldaGoneBetter</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_Doh.wav">
+      <Name>John_Doh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_DoNotWriteSQL.wav">
+      <Name>John_DoNotWriteSQL</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_ImOutaHere.wav">
+      <Name>John_ImOutaHere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_LogABug.wav">
+      <Name>John_LogABug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_LoserScreen_1.wav">
+      <Name>John_LoserScreen_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_OhWellGuessWeDontShip.wav">
+      <Name>John_OhWellGuessWeDontShip</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_SmurfSongDidntWork.wav">
+      <Name>John_SmurfSongDidntWork</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\John\John_TimeToLeave.wav">
+      <Name>John_TimeToLeave</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_CarolsCube.wav">
+      <Name>John_CarolsCube</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_DidWeFireEveryone.wav">
+      <Name>John_DidWeFireEveryone</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_ISeePrinters.wav">
+      <Name>John_ISeePrinters</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_LoserScreen_3.wav">
+      <Name>John_LoserScreen_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MainBoard_2.wav">
+      <Name>John_MainBoard_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MainBoard_4.wav">
+      <Name>John_MainBoard_4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MaybeIfIJump.wav">
+      <Name>John_MaybeIfIJump</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MiddleOfNowhere.wav">
+      <Name>John_MiddleOfNowhere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MoneyHangAround.wav">
+      <Name>John_MoneyHangAround</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_MoveMyOffice.wav">
+      <Name>John_MoveMyOffice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_NewChair.wav">
+      <Name>John_NewChair</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_OohDollarOohs.wav">
+      <Name>John_OohDollarOohs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_RunInFlipFlops.wav">
+      <Name>John_RunInFlipFlops</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_RunOnCubeWalls.wav">
+      <Name>John_RunOnCubeWalls</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_SoftProBlueWall.wav">
+      <Name>John_SoftProBlueWall</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_SQLVersion.wav">
+      <Name>John_SQLVersion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\John\John_WheresMyOffice.wav">
+      <Name>John_WheresMyOffice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_CrapWeRunOutOfTime.wav">
+      <Name>John_CrapWeRunOutOfTime</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_DidHeChangeTheMAze.wav">
+      <Name>John_DidHeChangeTheMAze</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_GetThereWhenWedo.wav">
+      <Name>John_GetThereWhenWedo</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_I%27mStuck.wav">
+      <Name>John_I%27mStuck</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_ImLost.wav">
+      <Name>John_ImLost</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_MakeMeTheRat.wav">
+      <Name>John_MakeMeTheRat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_MortonDamnMaze.wav">
+      <Name>John_MortonDamnMaze</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_OverEngineered.wav">
+      <Name>John_OverEngineered</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\John\John_WhoDesignedThisMaze.wav">
+      <Name>John_WhoDesignedThisMaze</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_Awesome.wav">
+      <Name>John_Awesome</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_DontLookConfused.wav">
+      <Name>John_DontLookConfused</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_HowWouldIKnow.wav">
+      <Name>John_HowWouldIKnow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_NoneOfThoseTwo.wav">
+      <Name>John_NoneOfThoseTwo</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_NotAWord.wav">
+      <Name>John_NotAWord</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_OhYeah.wav">
+      <Name>John_OhYeah</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_PieChart.wav">
+      <Name>John_PieChart</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\John\John_SemiColons.wav">
+      <Name>John_SemiColons</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\SeeJoyce\John\John_IBetIGet85K.wav">
+      <Name>John_IBetIGet85K</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\SeeJoyce\John\John_Oops.wav">
+      <Name>John_Oops</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_AhDang.wav">
+      <Name>John_AhDang</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_BugFreeShipIt.wav">
+      <Name>John_BugFreeShipIt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_DontCongratulatePeople.wav">
+      <Name>John_DontCongratulatePeople</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_GoodJob.wav">
+      <Name>John_GoodJob</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_GoodJobWhatever.wav">
+      <Name>John_GoodJobWhatever</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_ImOnTopOfTheWorld.wav">
+      <Name>John_ImOnTopOfTheWorld</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_ImOutaHere.wav">
+      <Name>John_ImOutaHere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\John\John_Winner_1.wav">
+      <Name>John_Winner_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\InstructionPages\MazeInstructions.png">
+      <Name>MazeInstructions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\FridgeGame\Controls.png">
+      <Name>Controls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\MazeGame\Controls.png">
+      <Name>Controls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\QuizGame\Controls.png">
+      <Name>Controls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Objects\ScrollingLevel\Controls.png">
+      <Name>Controls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Mcb\Mcb_NotStaringAtPhone.wav">
+      <Name>Mcb_NotStaringAtPhone</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Mcb\Mcb_TheAwesomeist.wav">
+      <Name>Mcb_TheAwesomeist</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Mcb\Mcb_HaHa.wav">
+      <Name>Mcb_HaHa</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Mcb\Mcb_OhYeah.wav">
+      <Name>Mcb_OhYeah</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Mcb\Mcb_TakeThat.wav">
+      <Name>Mcb_TakeThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Mcb\Mcb_CanHadABug.wav">
+      <Name>Mcb_CanHadABug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Mcb\Mcb_DrDocuments.wav">
+      <Name>Mcb_DrDocuments</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Mcb\Mcb_FridgeIsAMess.wav">
+      <Name>Mcb_FridgeIsAMess</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Mcb\Mcb_oohMyFavorite.wav">
+      <Name>Mcb_oohMyFavorite</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_Defective.wav">
+      <Name>Mcb_Defective</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_HopeSomeoneTestsThat.wav">
+      <Name>Mcb_HopeSomeoneTestsThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_NeedADeveloper.wav">
+      <Name>Mcb_NeedADeveloper</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_Oops.wav">
+      <Name>Mcb_Oops</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_Ouch.wav">
+      <Name>Mcb_Ouch</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Mcb\Mcb_StupidBugs.wav">
+      <Name>Mcb_StupidBugs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Mcb\Mcb_ImOutaHere.wav">
+      <Name>Mcb_ImOutaHere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Mcb\Mcb_NextPerformanceReview.wav">
+      <Name>Mcb_NextPerformanceReview</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Mcb\Mcb_OKThen.wav">
+      <Name>Mcb_OKThen</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Mcb\Mcb_ThatWasDepressing.wav">
+      <Name>Mcb_ThatWasDepressing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Mcb\Mcb_YouCanDoBetter.wav">
+      <Name>Mcb_YouCanDoBetter</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Mcb\Mcb_BackToWork.wav">
+      <Name>Mcb_BackToWork</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Mcb\Mcb_IsItDoneYet.wav">
+      <Name>Mcb_IsItDoneYet</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Mcb\Mcb_MustBeFunFriday.wav">
+      <Name>Mcb_MustBeFunFriday</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Mcb\Mcb_NeedAHotFix.wav">
+      <Name>Mcb_NeedAHotFix</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Mcb\Mcb_WishBugsWouldDisappear.wav">
+      <Name>Mcb_WishBugsWouldDisappear</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_Can%27tFindTheBoardRoom.wav">
+      <Name>Mcb_Can%27tFindTheBoardRoom</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_HurryHurryHurry.wav">
+      <Name>Mcb_HurryHurryHurry</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_HurryHurryHurry2.wav">
+      <Name>Mcb_HurryHurryHurry2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_LateForTheMeeting.wav">
+      <Name>Mcb_LateForTheMeeting</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_MoreSPDollarsThanJohnsSeen.wav">
+      <Name>Mcb_MoreSPDollarsThanJohnsSeen</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_NeedADeveloper.wav">
+      <Name>Mcb_NeedADeveloper</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_OfficeIsSuchAMaze.wav">
+      <Name>Mcb_OfficeIsSuchAMaze</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Mcb\Mcb_SlowDownJoyce.wav">
+      <Name>Mcb_SlowDownJoyce</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\QuizGame\Mcb\Mcb_90Percent.wav">
+      <Name>Mcb_90Percent</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\Mcb\Mcb_RunningOutOfTime.wav">
+      <Name>Mcb_RunningOutOfTime</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\SeeJoyce\Mcb\Mcb_HiJoyce.wav">
+      <Name>Mcb_HiJoyce</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Mcb\Mcb_ShipIt.wav">
+      <Name>Mcb_ShipIt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Mcb\Mcb_ShipItLoud.wav">
+      <Name>Mcb_ShipItLoud</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Mcb\Mcb_ThatWasAwesome.wav">
+      <Name>Mcb_ThatWasAwesome</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Mcb\Mcb_ThatWasFantastic.wav">
+      <Name>Mcb_ThatWasFantastic</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Mcb\Mcb_WishBugsWouldDisappear.wav">
+      <Name>Mcb_WishBugsWouldDisappear</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\BugSquish\2.wav">
+      <Name>2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\BugSquish\3.wav">
+      <Name>3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\Effects\BugSquish\4.wav">
+      <Name>4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Effects\MarioJump.wav">
+      <Name>MarioJump</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Don\Don_DonTheDefender.wav">
+      <Name>Don_DonTheDefender</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Don\Don_DontYouLikeMyShorts.wav">
+      <Name>Don_DontYouLikeMyShorts</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Don\Don_LookAtTheOtherTwo.wav">
+      <Name>Don_LookAtTheOtherTwo</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Don\Don_ReadyForCombat.wav">
+      <Name>Don_ReadyForCombat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\ChooseMeScreen\Don\Don_SillyHatOnTwo.wav">
+      <Name>Don_SillyHatOnTwo</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_AHa.wav">
+      <Name>Don_AHa</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_ImDandy.wav">
+      <Name>Don_ImDandy</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_NowImGettingIt.wav">
+      <Name>Don_NowImGettingIt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_NowYoureGettingIt.wav">
+      <Name>Don_NowYoureGettingIt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_Ozzie.wav">
+      <Name>Don_Ozzie</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_RockOn.wav">
+      <Name>Don_RockOn</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_ThatsAwesome.wav">
+      <Name>Don_ThatsAwesome</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_Yeah.wav">
+      <Name>Don_Yeah</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\CrushBug\Don\Don_Yes.wav">
+      <Name>Don_Yes</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_AwesomeBreakroom.wav">
+      <Name>Don_AwesomeBreakroom</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_ColdCans.wav">
+      <Name>Don_ColdCans</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_DrDocsIsMyFav.wav">
+      <Name>Don_DrDocsIsMyFav</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_GetAnotherOne.wav">
+      <Name>Don_GetAnotherOne</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_NeedtoMoveFasterThanThat.wav">
+      <Name>Don_NeedtoMoveFasterThanThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_OohAlmost.wav">
+      <Name>Don_OohAlmost</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_TimeToRestock.wav">
+      <Name>Don_TimeToRestock</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\FridgeGame\Don\Don_VeryThursty.wav">
+      <Name>Don_VeryThursty</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_Ahh2.wav">
+      <Name>Don_Ahh2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_NotGood.wav">
+      <Name>Don_NotGood</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_StopShipBug.wav">
+      <Name>Don_StopShipBug</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_TestCaseForThat.wav">
+      <Name>Don_TestCaseForThat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_Toast.wav">
+      <Name>Don_Toast</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_TryAgain.wav">
+      <Name>Don_TryAgain</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\HitByBug\Don\Don_uhhhh.wav">
+      <Name>Don_uhhhh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Don\Don_FlexTimeCancelled.wav">
+      <Name>Don_FlexTimeCancelled</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Don\Don_IHaveFaithInYou.wav">
+      <Name>Don_IHaveFaithInYou</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Don\Don_NoMoreFunFridays.wav">
+      <Name>Don_NoMoreFunFridays</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\LoserScreen\Don\Don_ThatWasInteresting.wav">
+      <Name>Don_ThatWasInteresting</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_ABugAtTheLastMinute.wav">
+      <Name>Don_ABugAtTheLastMinute</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_AlwaysClosed.wav">
+      <Name>Don_AlwaysClosed</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_AreYouHavingFun.wav">
+      <Name>Don_AreYouHavingFun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_BugsAreMyFriend.wav">
+      <Name>Don_BugsAreMyFriend</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_HappyFriday.wav">
+      <Name>Don_HappyFriday</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_HappyMOnday.wav">
+      <Name>Don_HappyMOnday</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_HelloJohn.wav">
+      <Name>Don_HelloJohn</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_HelloTeam.wav">
+      <Name>Don_HelloTeam</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_ICanJumpReallyHigh.wav">
+      <Name>Don_ICanJumpReallyHigh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_ILikeSPDollars.wav">
+      <Name>Don_ILikeSPDollars</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_imHavingFun.wav">
+      <Name>Don_imHavingFun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_OohMoreDollars.wav">
+      <Name>Don_OohMoreDollars</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_WannaBuyAChair.wav">
+      <Name>Don_WannaBuyAChair</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_WhichPrinter.wav">
+      <Name>Don_WhichPrinter</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MainBoard\Don\Don_WonderTwins.wav">
+      <Name>Don_WonderTwins</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Don\Don_HelloJoyceHowAreYou.wav">
+      <Name>Don_HelloJoyceHowAreYou</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Don\Don_ImLost.wav">
+      <Name>Don_ImLost</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Don\Don_JohnCantFindMeHere.wav">
+      <Name>Don_JohnCantFindMeHere</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Don\Don_JoyceIsGoingToBeatMe.wav">
+      <Name>Don_JoyceIsGoingToBeatMe</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\MazeGame\Don\Don_WrongTurn.wav">
+      <Name>Don_WrongTurn</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\QuizGame\Don\Don_ImConfused.wav">
+      <Name>Don_ImConfused</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\Don\Don_PracticeMakesPerfect.wav">
+      <Name>Don_PracticeMakesPerfect</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\QuizGame\Don\Don_StudyPaysOff.wav">
+      <Name>Don_StudyPaysOff</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\SeeJoyce\Don\Don_HelloJoyceHowAreYou.wav">
+      <Name>Don_HelloJoyceHowAreYou</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\SeeJoyce\Don\Don_JoyceDidntIJustSeeYou.wav">
+      <Name>Don_JoyceDidntIJustSeeYou</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Don\Don_Awesome.wav">
+      <Name>Don_Awesome</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Don\Don_Professional.wav">
+      <Name>Don_Professional</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Don\Don_ScoreOneForSP.wav">
+      <Name>Don_ScoreOneForSP</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Audio\VoiceOvers\WinnerScreen\Don\Don_ThatsHowIRoll.wav">
+      <Name>Don_ThatsHowIRoll</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Allen.png">
+      <Name>Allen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Amy.png">
+      <Name>Amy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Bob.png">
+      <Name>Bob</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\Cory.png">
+      <Name>Cory</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Backgrounds\ScrollingLevel\John.png">
+      <Name>John</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Objects\ScrollingLevel\Windows.png">
+      <Name>Windows</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\TextBox.png">
+      <Name>TextBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Caret.png">
+      <Name>Caret</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Overlays\ScoreDialog.png">
+      <Name>ScoreDialog</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\TextBoxBlue.png">
+      <Name>TextBoxBlue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

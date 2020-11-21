@@ -1,0 +1,6 @@
+This project creates a WCF server that runs as a console app.  When the client sends information to it,
+the information is stored in the Items folder that is created immediately below its folder.  The
+information is also echoed to the console.
+
+The service requires administrative privilege to run.  To execute it, just right-click the EXE and
+select "Run as adminstrator".  The screen will say, press <Ctrl-Break> to exit.

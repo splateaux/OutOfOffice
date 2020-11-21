@@ -1,0 +1,23 @@
+A
+{
+	font: normal 9.75pt arial;
+	text-decoration: none;
+	cursor: default;
+	color: #000000;
+}
+A:hover
+{
+	text-decoration: underline;
+	color: #000000;
+}
+A:visited
+{
+	color: #000000;
+}
+.OrderGlyph
+{
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\Resources\OrderGlyph.png');
+	height: 16px;
+	width: 16px;
+	margin: 0px 3px 0px 0px;
+}

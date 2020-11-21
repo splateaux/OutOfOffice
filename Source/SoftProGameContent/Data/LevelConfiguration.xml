@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LevelConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Levels>
+    <LevelInfo>
+      <AllowableTimeInSeconds>240</AllowableTimeInSeconds>
+      <SoundTrack>Audio/Songs/Music</SoundTrack>
+      <Width>9750</Width>
+      <Height>720</Height>
+      <XAxisViewMargin>0.35</XAxisViewMargin>
+      <YAxisViewMargin>0.35</YAxisViewMargin>
+      <PlayerStartPosition>{X:40 Y:445}</PlayerStartPosition>
+      <PlayerLevelIndex>6</PlayerLevelIndex>
+      <Layers>
+        <!-- Screen Boundaries -->
+        <LayerInfo>
+          <ScrollRate>0.0</ScrollRate>
+          <Sprites>
+            <!-- Begin Screen Boundaries-->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:1280 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:0 Y:640}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:1280 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:1260 Y:0}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Screen Boundaries -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Ceiling and Floor -->
+        <LayerInfo>
+          <ScrollRate>0.65</ScrollRate>
+          <!-- 0.75 -->
+          <Sprites>
+            <!-- Begin Backgrounds -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Ceiling</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Carpet</Texture>
+            </SpriteInfo>
+            <!-- End Backgrounds -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Back Wall, Small Cubes -->
+        <LayerInfo>
+          <ScrollRate>0.63</ScrollRate>
+          <Sprites>
+            <!-- Begin Backgrounds -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BackWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubeWallsSmall</Texture>
+            </SpriteInfo>
+            <!-- End Backgrounds -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Walls, Windows, Doors, etc. -->
+        <LayerInfo>
+          <ScrollRate>0.65</ScrollRate>
+          <Sprites>
+            <!-- Begin Exit -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Exit</SpriteType>
+              <Position>{X:6755 Y:491}</Position>
+              <Texture>Textures/Blank</Texture>
+            </SpriteInfo>
+            <!-- End Exit -->
+
+            <!-- Begin Backgrounds -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/LeftOutwardBlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/LeftInwardBlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1520 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/RightInwardYellowWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1559 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/YellowWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2839 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/YellowWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4119 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/LeftInwardYellowWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4359 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/RightInwardBlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4398 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5678 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BlueWall</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5506 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/RightOutwardBlueWall</Texture>
+            </SpriteInfo>
+            <!-- End Backgrounds -->
+
+            <!-- Begin Chairs -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6255 Y:400}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BunchOfChairs</Texture>
+            </SpriteInfo>
+            <!-- End Chairs -->
+
+            <!-- Begin Doors -->
+            <!-- * Entry Door -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:-20 Y:40}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/EntryDoorBack</Texture>
+            </SpriteInfo>
+
+            <!-- * Mini-Game Doors-->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Door</SpriteType>
+              <Position>{X:1780 Y:267}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/LobbyDoor</Texture>
+              <Settings>
+                <Setting Key="LevelScreenName" Value="MazeGameScreen" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Door</SpriteType>
+              <Position>{X:3430 Y:262}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/TrainingRoomDoor</Texture>
+              <Settings>
+                <Setting Key="LevelScreenName" Value="QuizGameScreen" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Door</SpriteType>
+              <Position>{X:4500 Y:252}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BreakRoomDoor</Texture>
+              <Settings>
+                <Setting Key="LevelScreenName" Value="FridgeGameScreen" />
+              </Settings>
+            </SpriteInfo>
+
+            <!-- * Bathroom Doors -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5500 Y:262}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/MensRRClosed</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5860 Y:262}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/WomensRRClosed</Texture>
+            </SpriteInfo>
+
+            <!-- * Exit Door -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6618 Y:367}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/ExitDoor</Texture>
+            </SpriteInfo>
+            <!-- End Doors -->
+
+            <!-- Begin Sprites -->
+            <!-- * People -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1920 Y:200}</Position>
+              <Texture>Textures/Objects/Joyce/HiThere1</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3650 Y:200}</Position>
+              <Texture>Textures/Objects/Joyce/HiThere2</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4775 Y:200}</Position>
+              <Texture>Textures/Objects/Joyce/HiThere3</Texture>
+            </SpriteInfo>
+
+            <!-- * Exit Sign -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6678 Y:295}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/ExitSign</Texture>
+            </SpriteInfo>
+            
+            <!-- * Water Fountain -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5728 Y:388}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/WaterFountain</Texture>
+            </SpriteInfo>
+            <!-- End Sprites -->
+
+            <!-- Begin Platforms -->
+            <!-- * Chairs -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:6288 Y:535}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/TealChair</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:6388 Y:510}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BlackChair</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:6408 Y:520}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/RedChair</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Impassable" />
+              </Settings>
+            </SpriteInfo>
+            
+            <!-- * Barriers -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:5586 Y:358}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:92 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:5798 Y:424}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:60 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:5947 Y:358}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:92 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Platforms -->            
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Big Cubicles (Back Wall) and Cube People -->
+        <LayerInfo>
+          <ScrollRate>0.66</ScrollRate>
+          <Sprites>
+            <!-- Begin Back Cube Walls -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:160 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:253 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:346 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:439 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:532 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:625 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:718 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:811 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:904 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:997 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1090 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1183 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2143 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2236 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2329 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2422 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2515 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2608 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2701 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2794 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2887 Y:365}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCube</Texture>
+            </SpriteInfo>
+            <!-- End Back Cube Walls -->
+
+            <!-- Begin Sprites -->
+            <!-- * Windows -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3260 Y:301}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/Windows</Texture>
+            </SpriteInfo>
+
+            <!-- * SoftPro Sign (with money) -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5155 Y:297}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5155 Y:294}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5255 Y:297}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5255 Y:294}</Position>
+            </SpriteInfo>
+            
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5135 Y:282}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/SoftPro</Texture>
+            </SpriteInfo>
+            
+            <!-- * Cube People -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:25 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubePeople</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1996 Y:0}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/CubePeople2</Texture>
+            </SpriteInfo>
+
+            <!-- * Hall People -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4220 Y:285}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/HallPeople</Texture>
+            </SpriteInfo>
+
+            <!-- * Bathroom People -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5256 Y:326}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Bob</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5355 Y:330}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Cory</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5408 Y:322}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Allen</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5500 Y:335}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/John</Texture>
+            </SpriteInfo>
+            
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6195 Y:326}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BathroomPeople2</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6105 Y:322}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/Amy</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6275 Y:332}</Position>
+              <Texture>Textures/Backgrounds/ScrollingLevel/BathroomPeople3</Texture>
+            </SpriteInfo>
+            <!-- End Sprites -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Cube doors, Tables, Printers, SoftPro Dollars etc. -->
+        <LayerInfo>
+          <ScrollRate>0.67</ScrollRate>
+          <Sprites>
+            <!-- Begin Cubes -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:160 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:420 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:680 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:940 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:1200 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2150 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2410 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2670 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2930 Y:350}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/BigCubeFront</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Cubes -->
+
+            <!-- Begin Money -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:40 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:50 Y:55}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:450 Y:300}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:530 Y:300}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:610 Y:300}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:690 Y:300}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:1280 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:1300 Y:40}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:1400 Y:35}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:1420 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:1465 Y:55}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2240 Y:380}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2320 Y:400}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2400 Y:380}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2780 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2800 Y:55}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2820 Y:60}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2835 Y:53}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2860 Y:62}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:2900 Y:50}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5436 Y:53}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5466 Y:62}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:5496 Y:50}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:6197 Y:53}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:6227 Y:62}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:6257 Y:50}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3314 Y:160}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3344 Y:165}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3334 Y:160}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3354 Y:167}</Position>
+            </SpriteInfo>
+            
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3389 Y:366}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:3389 Y:367}</Position>
+            </SpriteInfo>
+
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4130 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4124 Y:55}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4132 Y:60}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4136 Y:53}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4123 Y:62}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4114 Y:50}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4146 Y:61}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4142 Y:53}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4133 Y:62}</Position>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.SoftProDollar</SpriteType>
+              <Position>{X:4150 Y:56}</Position>
+            </SpriteInfo>
+            <!-- End Money-->
+
+            <!-- Begin Platforms -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:320 Y:540}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/Table</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:355 Y:500}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/LaserPrinter</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2650 Y:540}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/Table</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.CollidableSprite</SpriteType>
+              <Position>{X:2670 Y:500}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/LaserPrinter</Texture>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Platforms -->
+
+            <!-- Begin Sprites -->
+            <!-- * Boxes -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3060 Y:408}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/Boxes</Texture>
+            </SpriteInfo>
+
+            <!-- * Bookshelf -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:4030 Y:287}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/Bookcase</Texture>
+            </SpriteInfo>
+
+            <!-- * Barriers -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:3120 Y:504}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:32 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Barrier</SpriteType>
+              <Position>{X:4125 Y:393}</Position>
+              <Settings>
+                <Setting Key="CollidableType" Value="Platform" />
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:88 Height:20}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Sprites -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Player -->
+        <LayerInfo>
+          <ScrollRate>1.0</ScrollRate>
+          <Sprites>
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Enemies -->
+        <LayerInfo>
+          <ScrollRate>0.67</ScrollRate>
+          <Sprites>
+            <!-- Begin Patrol Markers-->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:500 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:1500 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:4100 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:400 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:5200 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:5500 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.PatrolMarker</SpriteType>
+              <Position>{X:6288 Y:0}</Position>
+              <Settings>
+                <Setting Key="Shape" Value="{X:0 Y:0 Width:20 Height:720}" />
+                <Setting Key="Color" Value="{R:0 G:0 B:0 A:0}" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Patrol Markers-->
+
+            <!-- Begin Enemies -->
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:1280 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugA" />
+                <Setting Key="OnPatrol" Value="True" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:2560 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugB" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:3840 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugC" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:4000 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugD" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:4500 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugE" />
+                <Setting Key="OnPatrol" Value="True" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:4550 Y:480}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugF" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:4633 Y:485}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugD" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:5600 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugB" />
+                <Setting Key="OnPatrol" Value="True" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:6000 Y:491}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugE" />
+                <Setting Key="OnPatrol" Value="True" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:7000 Y:485}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugC" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:6200 Y:485}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugD" />
+                <Setting Key="CanRespawn" Value="True" />
+                <Setting Key="SecondsToRespawn" Value="30" />
+              </Settings>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Enemy</SpriteType>
+              <Position>{X:6125 Y:485}</Position>
+              <Settings>
+                <Setting Key="EnemyName" Value="BugF" />
+              </Settings>
+            </SpriteInfo>
+            <!-- End Enemies -->
+          </Sprites>
+        </LayerInfo>
+
+        <!-- Entry and Exit Doors -->
+        <LayerInfo>
+          <ScrollRate>0.65</ScrollRate>
+          <Sprites>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:-20 Y:40}</Position>
+              <Texture>Textures/Objects/ScrollingLevel/EntryDoorFront</Texture>
+            </SpriteInfo>
+          </Sprites>
+        </LayerInfo>
+
+        <!--Debug Measuring-->
+        <!--<LayerInfo>
+          <ScrollRate>0.67</ScrollRate>
+          <Sprites>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:0 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:1280 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:2560 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:3840 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:5120 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+            <SpriteInfo>
+              <SpriteType>SoftProGameWindows.Sprite</SpriteType>
+              <Position>{X:6400 Y:0}</Position>
+              <Texture>Textures/MeasuringGrid</Texture>
+            </SpriteInfo>
+          </Sprites>
+        </LayerInfo>-->
+      </Layers>
+    </LevelInfo>
+  </Levels>
+</LevelConfiguration>

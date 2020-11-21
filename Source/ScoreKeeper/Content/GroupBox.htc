@@ -1,0 +1,207 @@
+<head>
+    <public:component tagname="GroupBox">
+      <meta http-equiv="MSThemeCompatible" content="yes">      
+      <public:defaults viewLinkContent tabStop viewMasterTab="false" />
+      <public:attach event="oncontentready" onevent="init()" />
+      <public:method name="reload" />
+      <public:property name="content" get="getContent" />
+    </public:component>
+	<link rel="Stylesheet" type="text/css" href=".\RssFeed.css" />
+	<link rel="Stylesheet" type="text/css" href=".\Common.css" />
+    <style>
+        BODY
+        {
+            font: notmal 9.75pt arial;
+        }
+        .GroupBox
+        {
+            border:none 0px;
+	    	padding:7px;
+            margin:0px;                
+        }
+        .GroupBoxTable
+        {
+            font:normal 9.75pt arial;
+        }
+        .GroupBoxTopLeft
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxTopLeft.png', sizingMethod='image');
+	        /*background-image:url('.\GroupBoxTopLeft.png');*/
+	        /*background-repeat:no-repeat;*/
+	        height:25px;
+	        width:8px;
+        }
+        .GroupBoxTopCenterOuter
+        {
+	        border:none 0px;
+	        margin:0px;
+	        padding:0px;
+        }
+        .GroupBoxTopCenterInner
+        {
+	        height:100%;
+	        width:100%;
+	        border:none 0px;
+	        margin:0px;
+	        padding:0px;
+        }
+        .GroupBoxTopCenterUpper
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxTopMiddleUpper.png', sizingMethod='scale');
+	        /*background-image:url('.\GroupBoxTopMiddleUpper.png');*/
+	        /*background-repeat:repeat-x;*/
+	        height:4px;
+	        width:100%;
+        }
+        .GroupBoxTopCenterMiddle
+        {
+            height:100%;
+            font:bold 10pt Arial;
+            color:#155094;
+            filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#FFD7E2ED', EndColorStr='#FF5B93C4');
+        }
+        .GroupBoxTopCenterLower
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxTopMiddleLower.png', sizingMethod='scale');
+	        /*background-image:url('.\GroupBoxTopMiddleLower.png');*/
+	        /*background-repeat:repeat-x;*/
+	        height:2px;
+	        width:100%;
+        }
+        .GroupBoxTopRight
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxTopRight.png', sizingMethod='image');
+	        /*background-image:url('.\GroupBoxTopRight.png');*/
+	        /*background-repeat:no-repeat;*/
+	        height:25px;
+	        width:9px;	    	
+        }
+        .GroupBoxBottomLeft
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxBottomLeft.png', sizingMethod='image');
+	        /*background-image:url('.\GroupBoxBottomLeft.png');*/
+	        /*background-repeat:no-repeat;*/
+	        height:9px;
+	        width:8px;	    	
+        }
+        .GroupBoxBottomCenter
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxBottomMiddle.png', sizingMethod='scale');
+	        /*background-image:url('.\GroupBoxBottomMiddle.png');*/
+	        /*background-repeat:repeat-x;*/
+	        height:9px;
+	        width:100%;
+        }
+        .GroupBoxBottomRight
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxBottomRight.png', sizingMethod='image');
+	        /*background-image:url('.\GroupBoxBottomRight.png');*/
+	        /*background-repeat:no-repeat;*/
+	        height:9px;
+	        width:9px;	    	
+        }
+        .GroupBoxMiddleLeft
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxMiddleLeft.png', sizingMethod='scale');
+	        /*background-image:url('.\GroupBoxMiddleLeft.png');*/
+	        /*background-repeat:repeat-y;*/
+	        width:8px;	   
+	        height:100%; 	
+        }
+        .GroupBoxMiddleCenter
+        {
+	        font:9.75pt Arial;
+	        padding:3px;
+        }
+        .GroupBoxMiddleRight
+        {
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\GroupBoxMiddleRight.png', sizingMethod='scale');
+	        /*background-image:url('.\GroupBoxMiddleRight.png');*/
+	        /*background-repeat:repeat-y;*/
+	        width:8px;	    	
+	        height:100%;
+        } 	             
+    </style>
+
+    <script language="jscript">
+        // Defines the component entry point.
+        function init() {
+            //handle the IE6 problem - no good support for PNGs
+            var isIE6 = navigator.appVersion.indexOf('MSIE 6.0') > -1;
+            var ss = document.styleSheets[2];
+            for (var r = 0; r < ss.rules.length; r++) {
+                var rule = ss.rules[r];
+                if (rule.selectorText == '.GroupBoxTable') {
+                    if (isIE6) {
+                        rule.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'.\\AlphaWhitePixel.png\', sizingMethod=\'scale\')';
+                        break;
+                    } else {
+                        rule.style.backgroundImage = 'url(.\\AlphaWhitePixel.png)';
+                        rule.style.backgroundRepeat = 'repeat';
+                        break;
+                    }
+                }
+            }
+
+            reload();
+        }
+
+        function reload() {
+            TitleElement.innerHTML = element.title;
+
+            if (element.innerHTML != '') {
+                ContentElement.innerHTML = element.innerHTML;
+            }
+        }
+
+        function getContent() {
+            return ContentElement;
+        }
+    </script>
+
+</head>
+<body style="background-color:transparent;overflow:hidden;" class="GroupBox">
+    <table class="GroupBoxTable" cellpadding="0" border="0" cellspacing="0" style="height:100%;width:100%;">
+        <tr>
+            <td class="GroupBoxTopLeft" nowrap>
+            </td>
+            <td class="GroupBoxTopCenterOuter">
+                <table class="GroupBoxTopCenterInner" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="GroupBoxTopCenterUpper">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="GroupBoxTopCenterMiddle" nowrap id="TitleElement">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="GroupBoxTopCenterLower">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="GroupBoxTopRight" nowrap>
+            </td>
+        </tr>
+        <tr>
+            <td class="GroupBoxMiddleLeft" nowrap>
+            </td>
+            <td class="GroupBoxMiddleCenter" id="ContentElement">
+                <div style="width:100%;text-align:center;vertical-align:middle;">
+                    <img src=".\Progress.gif" />
+                </div>
+            </td>
+            <td class="GroupBoxMiddleRight" nowrap>
+            </td>
+        </tr>
+        <tr>
+            <td class="GroupBoxBottomLeft" nowrap>
+            </td>
+            <td class="GroupBoxBottomCenter">
+            </td>
+            <td class="GroupBoxBottomRight" nowrap>
+            </td>
+        </tr>
+    </table>
+</body>

@@ -1,0 +1,329 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ui>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=5">
+    <title>SoftPro R&amp;D Fun Friday</title>
+    <link rel="Stylesheet" type="text/css" href=".\Common.css" />
+    <?import namespace="ui" implementation=".\GroupBox.htc">
+    <?import namespace="ui" implementation=".\Button.htc">
+    <style type="text/css">
+        BODY {
+            background-color: #DBE5ED;
+            margin: 0px;
+            /*background-image:url('House.png');
+                background-attachment:fixed;
+                background-position:right bottom;
+                background-repeat:no-repeat;*/
+            cursor: default;
+        }
+
+        A {
+            font: normal 9.75pt arial;
+            text-decoration: none;
+            cursor: default;
+            color: Black;
+        }
+
+            A:hover {
+                text-decoration: underline;
+                color: Black;
+            }
+
+            A:visited {
+                color: Black;
+            }
+
+        .OuterLayoutTable {
+            height: 100%;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .BannerLeft {
+            background-image: url('.\BannerLeft.png');
+            background-repeat: no-repeat;
+            height: 66px;
+            width: 128px;
+        }
+
+        .BannerCenter {
+            background-image: url('.\BannerCenter.png');
+            background-repeat: repeat-x;
+            height: 66px;
+            width: 100%;
+        }
+
+        .BannerRight {
+            background-image: url('.\BannerRight.png');
+            background-repeat: no-repeat;
+            height: 66px;
+            width: 663px;
+        }
+
+        .Watermark {
+            display: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.\House.png', sizingMethod='image');
+            position: absolute;
+            z-index: -2;
+            height: 328px;
+            width: 412px;
+        }
+    </style>
+
+    <script language="jscript">
+        var feed = null;
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        
+        //initialization
+        function init() {
+            resize();
+            window.setTimeout('fillScores();', 100);
+            window.setTimeout('fillMoneyInfo();', 200);
+            window.setTimeout('fillLymphomaInfo();', 300);
+
+            window.setTimeout('gotoMovie();', 60000 * 5);
+        }
+
+        function gotoMovie() {
+            var movie = getParameterByName('movie');
+            if (movie == null || movie.length == 0) {
+                movie = '1';
+            }
+            window.navigate('Movie' + movie + '.htm');
+        }
+
+        //handles the resize event
+        function resize() {
+            Watermark.style.top = OuterLayoutTable.clientHeight - 328;
+            Watermark.style.left = OuterLayoutTable.clientWidth - 412;
+            Watermark.style.display = "block";
+        }
+
+        //fills the scores groupbox
+        function fillScores() {
+
+            //construct a marquee
+            var marquee = document.createElement('marquee');
+            marquee.behavior = 'scroll';
+            marquee.direction = 'up';
+            marquee.height = '100%';
+            marquee.scrollDelay = '85';
+            marquee.scrollAmount = '3';
+            marquee.onfinish = 'javascript:fillScores();';
+            marquee.loop = 1;
+            
+            //construct the new content table
+            var table = document.createElement('table');
+            table.setAttribute('cellpadding', '0');
+            table.setAttribute('cellspacing', '0');
+            table.setAttribute('border', '0');
+            table.style.font = 'normal 9.75pt arial'
+            table.style.width = '100%';
+            table.style.height = '100%';
+            table.style.padding = '3px';
+
+            //get the scores xml feed
+
+            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            xmlDoc.async = false;
+            xmlDoc.load("/Display/TopScores.xml");
+
+            var scores = xmlDoc.getElementsByTagName("Score");
+            for (var s = 0; s < scores.length; s++) {
+                var score = scores[s];
+                createScoreRow(table, s, score.childNodes[0].text, score.childNodes[1].text, score.childNodes[2].text);
+            }
+
+            //insert a filler cell
+            var fillrow = document.createElement('tr');
+            var fillcell = document.createElement('td');
+            fillcell.colSpan = '2';
+            fillcell.style.height = '100%';
+            fillcell.style.textAlign = 'right';
+            fillcell.style.verticalAlign = 'bottom';
+
+            fillrow.appendChild(fillcell);
+            table.appendChild(fillrow);
+            marquee.appendChild(table);
+
+            //update the ui
+            ScoreGroupBox.innerHTML = marquee.outerHTML; // table.outerHTML;
+            ScoreGroupBox.reload();
+        }
+
+        //creates a new task summary row
+        function createScoreRow(table, index, label, points, picture) {
+            //construct the row
+            var row = document.createElement('tr');
+
+            var indexCell = document.createElement("td");
+            indexCell.style.width = '25px';
+            indexCell.innerText = (index + 1).toString();
+            indexCell.noWrap = true;
+            indexCell.style.font = 'normal 14pt Press Start 2P';
+
+            var imageCell = document.createElement("td");
+            imageCell.style.height = '100px';
+            imageCell.style.width = '100px';
+            imageCell.innerHTML = '<img style="padding:10px;" width="100%" height="100%" src="data:image/png;base64,' + picture + '" />';
+            imageCell.noWrap = true;
+
+            var labelCell = document.createElement('td');
+            labelCell.innerText = label;
+            labelCell.style.width = '100%';
+            labelCell.style.font = 'normal 14pt Press Start 2P';
+
+            var valueCell = document.createElement('td');
+            valueCell.noWrap = true;
+            valueCell.innerText = addCommas(points);
+            valueCell.align = "right";
+            valueCell.style.font = 'normal 14pt Press Start 2P';
+
+            //add the row
+            row.appendChild(indexCell);
+            row.appendChild(imageCell);
+            row.appendChild(labelCell);
+            row.appendChild(valueCell);
+            table.appendChild(row);
+
+            return row;
+        }
+
+        function addCommas(nStr) {
+            nStr += '';
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return x1 + x2;
+        }
+
+        function fillLymphomaInfo() {
+            InfoGroupBox.innerHTML = '<table class="OuterLayoutTable" height="100%">' +
+                '<tr>' +
+                    '<td align="center">' +
+                        '<br />' +
+                        '<img src="sepsisalliancelogo.gif" />' +
+                        '<br/>' +
+                        '<br/>' +
+                        '<!--<div style="font: bold italic 14pt arial;">About Sepsis Alliance</div>-->' +
+                    '</td>' +
+                '</tr>' +
+                '<tr>' +
+                    '<td height="100%" width="80%" valign="top" align="center">' +
+                        '<div style="padding: 0px 50px 0px 50px; text-align:left; font: normal 12pt arial;">Sepsis Alliance is a charitable organization run by a team of dedicated laypeople and healthcare professionals who share a strong commitment to battling sepsis. The organization was founded in 2007, by Dr. Carl Flatley, whose daughter Erin died of sepsis when she was 23 years old.<br/>' +
+                        '<br/>' +
+                        'Sepsis Alliance was created to raise sepsis awareness among both the general public and healthcare professionals. Sepsis awareness can and does save lives, yet fewer than half of American adults have ever heard the word. Sepsis Alliance also gives a voice to the millions of people who have been touched by sepsis – to the survivors, and the friends and family members of those who have survived or who have died. Survivors and those left behind often feel as if they are alone.<br/>' +
+                        '<br/>' +
+                        'The Sepsis Alliance team is working on producing as much information and educational material as is possible to help the general public become aware of this often deadly condition, and for professionals who can then help the public learn about sepsis when it does strike. This material includes the information available on this site, brochures (also available in Spanish), and videos.<br/>&nbsp;</div>' +
+                    '</td>' +
+                '</tr>' +
+                '<tr>' +
+                    '<td align="center">' +
+                        '<img src="SepsisRibbon.png" />' +
+                        '<img src="SepsisRibbon.png" />' +
+                        '<img src="SepsisRibbon.png" />' +
+                    '</td>' +
+                '</tr>' +
+            '</table>';
+            InfoGroupBox.reload();
+        }
+
+        function fillMoneyInfo() {
+
+            //get the funds
+            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            xmlDoc.async = false;
+            xmlDoc.load("/Display/TotalFunds.xml");
+
+            var funds = xmlDoc.getElementsByTagName("Funds");
+
+            MoneyGroupBox.innerHTML = '<table border="0" height="100%" width="100%">' +
+                '<tr>' +
+                    '<td align="center" nowrap>' +
+                        '<img src="cash-bag.png" />' +
+                    '</td>' +
+                    '<td align="center" width="100%">' +
+                        '<p style="font: bold 36pt arial; color: green;">' + funds[0].text + '</p>' +
+                    '</td>' +
+                '</tr>' +
+            '</table>';
+
+            MoneyGroupBox.reload();
+
+            window.setTimeout('fillMoneyInfo();', 30000);
+        }
+
+        function showGameVideo() {
+            InfoGroupBox.style.display = 'none';
+            Video.style.display = 'block';
+
+            window.setTimeout('hideGameVideo();', 30000);
+        }
+
+        function hideGameVideo() {
+            Video.style.display = 'none';
+            InfoGroupBox.style.display = 'block';
+
+            window.setTimeout('showGameVideo();', 10000);
+        }
+</script>
+</head>
+<body onload="init();" onresize="resize();" scroll="no">
+    <!-- background watermark -->
+    <div id="Watermark" class="Watermark"></div>
+    <!-- outer layout table -->
+    <table class="OuterLayoutTable" cellpadding="0" cellspacing="0" id="OuterLayoutTable">
+        <!-- header row -->
+        <tr>
+            <td colspan="2" style="height:69px;text-align:left;vertical-align:top" nowrap>
+                <div style="height:66px;width:100%;position:absolute;overflow:hidden;border-bottom:solid 3px #A5BDD3;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td class="BannerLeft" nowrap>&nbsp;</td>
+                            <td class="BannerCenter">&nbsp;</td>
+                            <td class="BannerRight" nowrap>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- body row -->
+        <tr>
+            <!-- column 1 -->
+            <td style="width:550px;height:100%;" nowrap>
+                <table style="height:100%;width:100%;" cellpadding="0" cellspacing="0">
+                    <!-- recent orders row -->
+                    <tr>
+                        <td nowrap height="30%">
+                            <ui:groupbox title="Funds Raised" id="MoneyGroupBox" style="height:100%;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap height="*">
+                            <ui:groupbox title="Out of Office Leaderboard" id="ScoreGroupBox" style="height:100%;" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!-- column 2 -->
+            <td style="width:100%;" nowrap>
+                <ui:groupbox title="Fun Friday Charity" style="height:100%;width:100%;" id="InfoGroupBox" />
+                <!--<div id="Video" style="height:100%;width:100%;display:none;">
+                    <embed type="application/x-mplayer2" src="Movie.wmv" loop="false" width="100%" height="100%" autostart="true" />
+                </div>-->
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

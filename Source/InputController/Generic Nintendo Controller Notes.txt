@@ -1,0 +1,23 @@
+﻿Notes on the Generic Nintendo Controller
+----------------------------------------
+
+USB VID = 0x0079
+USB PID = 0x0011
+I/O reports occur via interrupt transfers.
+No feature reports are available.
+
+
+Game reports occur by sending an output 5 byte packet of zeros.
+The return input report consists of 9 bytes with the following report.
+
+Report with no buttons pressed (hex)				USB Report Definition
+-------------------------------------------------   ---------------------
+Byte[0]: 00		- Constant, ignored					(Report Page ID 0)
+Byte[1]: 01		- Constant, ignored					(X report)
+Byte[2]: 7F		- Constant, ignored					(X report)
+Byte[3]: 7F		- Constant, ignored					(X report)
+Byte[4]: 7F		- 00: DPAD Left, FF:DPAD Right		(X report)
+Byte[5]: 7F		- 00: DPAD Up, FF:DPAD Down			(Y report)
+Byte[6]: 0F		- Bitmap: 20: "A", 40: "B"
+Byte[7]: 00		- Bitmap: 20: "Start", 10: "Select"
+Byte[8]: 00		- Constant, ignored
